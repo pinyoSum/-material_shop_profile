@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Thong Wassaduphan - Thai Yellow Pages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #e63946;
+      --secondary: #333333;
+      --light-gray: #f5f5f5;
+      --medium-gray: #e0e0e0;
+      --dark-gray: #666666;
+      --white: #ffffff;
+    }
+    
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: var(--white);
+      color: var(--secondary);
+    }
+    
+    .banner {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .section-header:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background-color: var(--primary);
+    }
+    
+    .service-icon {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+    
+    .products-slider::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .contact-group h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    
+    .social-link {
+      background-color: var(--primary);
+    }
+    
+    .social-link:hover {
+      background-color: #c1121f;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .nav-menu.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Header Section -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="bg-red-600 py-2">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex gap-4 text-sm text-white">
+          <a href="tel:+6621234567" class="hover:text-gray-200">โทร: 02-123-4567</a>
+          <a href="mailto:info@saithongwassaduphan.com" class="hover:text-gray-200">อีเมล: info@saithongwassaduphan.com</a>
+        </div>
+        <div class="flex gap-2">
+          <button class="font-bold text-white">TH</button>
+          <button class="font-bold text-white">EN</button>
+        </div>
+      </div>
+    </div>
+    <div class="py-4">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-gray-800 flex items-center">
+          ไทยทอง<span class="text-red-600 ml-1">วัสดุภัณฑ์</span>
+        </a>
+        <button class="mobile-menu-toggle hidden text-2xl">☰</button>
+        <nav class="nav-menu hidden md:flex gap-5">
+          <a href="#company-info" class="font-bold px-3 py-1 rounded hover:bg-gray-100">ข้อมูลบริษัท</a>
+          <a href="#about-us" class="font-bold px-3 py-1 rounded hover:bg-gray-100">เกี่ยวกับเรา</a>
+          <a href="#services" class="font-bold px-3 py-1 rounded hover:bg-gray-100">บริการของเรา</a>
+          <a href="#products" class="font-bold px-3 py-1 rounded hover:bg-gray-100">สินค้า</a>
+          <a href="#contact" class="font-bold px-3 py-1 rounded hover:bg-gray-100">ติดต่อเรา</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="banner h-96 flex items-center justify-center text-white text-center">
+    <div class="max-w-2xl px-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-shadow">ไทยทอง วัสดุภัณฑ์</h1>
+      <p class="text-lg md:text-xl mb-8">จำหน่ายวัสดุก่อสร้างและอุปกรณ์ตกแต่งบ้านคุณภาพดี ราคาเป็นกันเอง บริการจัดส่งทั่วประเทศ</p>
+      <button class="bg-red-600 text-white font-bold py-3 px-8 rounded hover:bg-red-700 transition">
+        ติดต่อเรา
+      </button>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <main class="py-12">
+    <div class="container mx-auto px-4">
+      <!-- Company Information Section -->
+      <section id="company-info" class="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div class="section-header relative pb-6 mb-8">
+          <h2 class="text-3xl font-bold mb-2">ข้อมูลบริษัท</h2>
+          <p class="text-gray-600">ข้อมูลสำคัญเกี่ยวกับบริษัทของเรา</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="company-image h-72 bg-gray-200 rounded-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                 alt="ไทยทอง วัสดุภัณฑ์ - อาคารสำนักงาน" class="w-full h-full object-cover">
+          </div>
+          <div class="company-history flex flex-col justify-center">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">ประวัติความเป็นมา</h3>
+            <p class="mb-4">ไทยทอง วัสดุภัณฑ์ ก่อตั้งขึ้นเมื่อปี พ.ศ. 2535 โดยคุณสมชาย ไทยทอง ด้วยความมุ่งมั่นที่จะนำเสนอวัสดุก่อสร้างคุณภาพดีในราคาที่เหมาะสมให้กับชุมชน</p>
+            <p class="mb-4">จากร้านขนาดเล็กในซอยสุขุมวิท ปัจจุบันเราเติบโตเป็นหนึ่งในผู้จำหน่ายวัสดุก่อสร้างชั้นนำในกรุงเทพมหานคร ด้วยพื้นที่กว่า 5,000 ตารางเมตร และสินค้ากว่า 10,000 รายการ</p>
+            <p>เรายังคงยึดมั่นในปรัชญาการดำเนินธุรกิจที่มุ่งเน้นคุณภาพสินค้า ราคาเป็นธรรม และการบริการที่ประทับใจ ตลอดระยะเวลากว่า 30 ปีที่ผ่านมา</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about-us" class="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div class="section-header relative pb-6 mb-8">
+          <h2 class="text-3xl font-bold mb-2">เกี่ยวกับเรา</h2>
+          <p class="text-gray-600">ประวัติความเป็นมาและวิสัยทัศน์ของบริษัท</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="about-image h-72 bg-gray-200 rounded-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                 alt="ไทยทอง วัสดุภัณฑ์" class="w-full h-full object-cover">
+          </div>
+          <div class="about-text">
+            <p class="mb-5">ไทยทอง วัสดุภัณฑ์ ก่อตั้งขึ้นเมื่อปี พ.ศ. 2535 โดยเริ่มต้นจากร้านขนาดเล็กที่จำหน่ายวัสดุก่อสร้างพื้นฐาน ด้วยความมุ่งมั่นในการให้บริการที่ดีและจำหน่ายสินค้าคุณภาพ ทำให้บริษัทเติบโตอย่างต่อเนื่อง</p>
+            <p class="mb-5">ปัจจุบัน ไทยทอง วัสดุภัณฑ์ เป็นหนึ่งในผู้จำหน่ายวัสดุก่อสร้างและอุปกรณ์ตกแต่งบ้านชั้นนำในกรุงเทพมหานคร ด้วยประสบการณ์กว่า 30 ปี เรามุ่งมั่นที่จะนำเสนอสินค้าคุณภาพดี ราคาเหมาะสม พร้อมบริการที่ประทับใจ</p>
+            <p>วิสัยทัศน์ของเรา คือ การเป็นผู้นำในธุรกิจจำหน่ายวัสดุก่อสร้างและอุปกรณ์ตกแต่งบ้านที่ครบวงจร ตอบสนองความต้องการของลูกค้าทุกระดับ</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-center">
+          <div class="stat-item bg-gray-100 p-6 rounded-lg">
+            <h3 class="text-4xl font-bold text-red-600 mb-3">30+</h3>
+            <p class="text-gray-700">ปีประสบการณ์</p>
+          </div>
+          <div class="stat-item bg-gray-100 p-6 rounded-lg">
+            <h3 class="text-4xl font-bold text-red-600 mb-3">5,000+</h3>
+            <p class="text-gray-700">ลูกค้าที่พึงพอใจ</p>
+          </div>
+          <div class="stat-item bg-gray-100 p-6 rounded-lg">
+            <h3 class="text-4xl font-bold text-red-600 mb-3">10,000+</h3>
+            <p class="text-gray-700">รายการสินค้า</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div class="section-header relative pb-6 mb-8">
+          <h2 class="text-3xl font-bold mb-2">บริการของเรา</h2>
+          <p class="text-gray-600">บริการที่เรามอบให้กับลูกค้าทุกท่าน</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="service-card border border-gray-200 rounded-lg p-5 transition hover:-translate-y-1 hover:shadow-md text-center">
+            <div class="service-icon w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5">
+              <span class="text-2xl">🏠</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">จำหน่ายวัสดุก่อสร้าง</h3>
+            <p class="text-gray-600 text-sm mb-4">จำหน่ายวัสดุก่อสร้างคุณภาพดี ราคาเป็นกันเอง มีให้เลือกหลากหลาย ทั้งปูน หิน ทราย เหล็ก และอื่นๆ อีกมากมาย</p>
+            <a href="#" class="text-white font-bold inline-block px-3 py-1 bg-red-600 rounded hover:bg-red-700 transition">
+              รายละเอียดเพิ่มเติม
+            </a>
+          </div>
+          <div class="service-card border border-gray-200 rounded-lg p-5 transition hover:-translate-y-1 hover:shadow-md text-center">
+            <div class="service-icon w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5">
+              <span class="text-2xl">🔨</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">จำหน่ายเครื่องมือช่าง</h3>
+            <p class="text-gray-600 text-sm mb-4">จำหน่ายเครื่องมือช่างทุกชนิด สำหรับงานก่อสร้างและซ่อมแซมบ้าน ทั้งแบรนด์ชั้นนำและราคาประหยัด</p>
+            <a href="#" class="text-white font-bold inline-block px-3 py-1 bg-red-600 rounded hover:bg-red-700 transition">
+              รายละเอียดเพิ่มเติม
+            </a>
+          </div>
+          <div class="service-card border border-gray-200 rounded-lg p-5 transition hover:-translate-y-1 hover:shadow-md text-center">
+            <div class="service-icon w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5">
+              <span class="text-2xl">🚚</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">บริการจัดส่ง</h3>
+            <p class="text-gray-600 text-sm mb-4">บริการจัดส่งสินค้าถึงหน้างาน ทั่วกรุงเทพฯ และปริมณฑล รวดเร็ว ตรงเวลา ในราคาที่เหมาะสม</p>
+            <a href="#" class="text-white font-bold inline-block px-3 py-1 bg-red-600 rounded hover:bg-red-700 transition">
+              รายละเอียดเพิ่มเติม
+            </a>
+          </div>
+          <div class="service-card border border-gray-200 rounded-lg p-5 transition hover:-translate-y-1 hover:shadow-md text-center">
+            <div class="service-icon w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5">
+              <span class="text-2xl">📋</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">ให้คำปรึกษา</h3>
+            <p class="text-gray-600 text-sm mb-4">บริการให้คำปรึกษาเกี่ยวกับการเลือกใช้วัสดุก่อสร้างและอุปกรณ์ตกแต่งบ้าน โดยทีมงานผู้เชี่ยวชาญ</p>
+            <a href="#" class="text-white font-bold inline-block px-3 py-1 bg-red-600 rounded hover:bg-red-700 transition">
+              รายละเอียดเพิ่มเติม
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div class="section-header relative pb-6 mb-8">
+          <h2 class="text-3xl font-bold mb-2">สินค้าของเรา</h2>
+          <p class="text-gray-600">สินค้าคุณภาพดีที่เราคัดสรรมาเพื่อคุณ</p>
+        </div>
+
+        <!-- Filters & Categories -->
+        <div class="filter-container mb-8">
+          <div class="filter-title text-lg font-bold mb-4">หมวดหมู่สินค้า</div>
+          <div class="filter-tags flex flex-wrap gap-3 mb-6">
+            <button class="filter-tag bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm transition active">
+              ทั้งหมด
+            </button>
+            <button class="filter-tag bg-gray-100 border-gray-200 px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition">
+              วัสดุก่อสร้าง
+            </button>
+            <button class="filter-tag bg-gray-100 border-gray-200 px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition">
+              เครื่องมือช่าง
+            </button>
+            <button class="filter-tag bg-gray-100 border-gray-200 px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition">
+              อุปกรณ์ประปา
+            </button>
+            <button class="filter-tag bg-gray-100 border-gray-200 px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition">
+              สีทาบ้าน
+            </button>
+            <button class="filter-tag bg-gray-100 border-gray-200 px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition">
+              อุปกรณ์ไฟฟ้า
+            </button>
+          </div>
+        </div>
+
+        <div class="products-container relative">
+          <div class="products-slider flex overflow-x-auto scroll-smooth -mx-2 pb-4 mb-6" id="productsSlider">
+            <div class="product-card flex-none w-72 mx-2 border border-gray-200 rounded-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-md">
+              <div class="product-image h-48 bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="ปูนซีเมนต์" class="w-full h-full object-cover transition">
+              </div>
+              <div class="product-details p-4">
+                <h3 class="font-bold mb-2">ปูนซีเมนต์ตราช้าง</h3>
+                <p class="text-gray-600 text-sm mb-3">ปูนซีเมนต์คุณภาพสูง เหมาะสำหรับงานก่อสร้างทั่วไป</p>
+                <div class="product-price font-bold text-lg mb-3">฿150.00</div>
+                <a href="#" class="product-button block w-full bg-red-600 text-white font-bold py-2 text-center rounded hover:bg-red-700 transition">
+                  สั่งซื้อ
+                </a>
+              </div>
+            </div>
+            <div class="product-card flex-none w-72 mx-2 border border-gray-200 rounded-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-md">
+              <div class="product-image h-48 bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="สีทาบ้าน" class="w-full h-full object-cover transition">
+              </div>
+              <div class="product-details p-4">
+                <h3 class="font-bold mb-2">สีทาบ้านทีโอเอ</h3>
+                <p class="text-gray-600 text-sm mb-3">สีทาบ้านคุณภาพดี ทนทานต่อสภาพอากาศ มีให้เลือกหลากหลายเฉดสี</p>
+                <div class="product-price font-bold text-lg mb-3">฿890.00</div>
+                <a href="#" class="product-button block w-full bg-red-600 text-white font-bold py-2 text-center rounded hover:bg-red-700 transition">
+                  สั่งซื้อ
+                </a>
+              </div>
+            </div>
+            <div class="product-card flex-none w-72 mx-2 border border-gray-200 rounded-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-md">
+              <div class="product-image h-48 bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="เครื่องมือช่าง" class="w-full h-full object-cover transition">
+              </div>
+              <div class="product-details p-4">
+                <h3 class="font-bold mb-2">ชุดเครื่องมือช่าง BOSCH</h3>
+                <p class="text-gray-600 text-sm mb-3">ชุดเครื่องมือช่างคุณภาพสูง ครบครัน สำหรับงานซ่อมแซมบ้าน</p>
+                <div class="product-price font-bold text-lg mb-3">฿3,500.00</div>
+                <a href="#" class="product-button block w-full bg-red-600 text-white font-bold py-2 text-center rounded hover:bg-red-700 transition">
+                  สั่งซื้อ
+                </a>
+              </div>
+            </div>
+            <div class="product-card flex-none w-72 mx-2 border border-gray-200 rounded-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-md">
+              <div class="product-image h-48 bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="กระเบื้อง" class="w-full h-full object-cover transition">
+              </div>
+              <div class="product-details p-4">
+                <h3 class="font-bold mb-2">กระเบื้องปูพื้น COTTO</h3>
+                <p class="text-gray-600 text-sm mb-3">กระเบื้องปูพื้นคุณภาพดี ดีไซน์สวยงาม ทนทาน</p>
+                <div class="product-price font-bold text-lg mb-3">฿450.00</div>
+                <a href="#" class="product-button block w-full bg-red-600 text-white font-bold py-2 text-center rounded hover:bg-red-700 transition">
+                  สั่งซื้อ
+                </a>
+              </div>
+            </div>
+            <div class="product-card flex-none w-72 mx-2 border border-gray-200 rounded-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-md">
+              <div class="product-image h-48 bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="อุปกรณ์ประปา" class="w-full h-full object-cover transition">
+              </div>
+              <div class="product-details p-4">
+                <h3 class="font-bold mb-2">อุปกรณ์ประปา</h3>
+                <p class="text-gray-600 text-sm mb-3">อุปกรณ์ประปาคุณภาพดี สำหรับงานซ่อมแซมและติดตั้งระบบประปา</p>
+                <div class="product-price font-bold text-lg mb-3">฿250.00</div>
+                <a href="#" class="product-button block w-full bg-red-600 text-white font-bold py-2 text-center rounded hover:bg-red-700 transition">
+                  สั่งซื้อ
+                </a>
+              </div>
+            </div>
+            <div class="product-card flex-none w-72 mx-2 border border-gray-200 rounded-lg overflow-hidden transition hover:-translate-y-1 hover:shadow-md">
+              <div class="product-image h-48 bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1581093458171-4e1ca5fe9a1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="เหล็กเส้น" class="w-full h-full object-cover transition">
+              </div>
+              <div class="product-details p-4">
+                <h3 class="font-bold mb-2">เหล็กเส้น</h3>
+                <p class="text-gray-600 text-sm mb-3">เหล็กเส้นคุณภาพดี ได้มาตรฐาน สำหรับงานก่อสร้าง</p>
+                <div class="product-price font-bold text-lg mb-3">฿1,200.00</div>
+                <a href="#" class="product-button block w-full bg-red-600 text-white font-bold py-2 text-center rounded hover:bg-red-700 transition">
+                  สั่งซื้อ
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls flex justify-center gap-3">
+            <button class="slider-button bg-white border-2 border-red-600 text-red-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition" id="prevButton">
+              &#10094;
+            </button>
+            <button class="slider-button bg-white border-2 border-red-600 text-red-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition" id="nextButton">
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div class="section-header relative pb-6 mb-8">
+          <h2 class="text-3xl font-bold mb-2">ติดต่อเรา</h2>
+          <p class="text-gray-600">มีคำถามหรือต้องการสอบถามข้อมูลเพิ่มเติม ติดต่อเราได้ตามช่องทางด้านล่าง</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="contact-info flex flex-col md:flex-row md:gap-8">
+            <div class="contact-group mb-8">
+              <h3 class="text-xl font-bold mb-4 relative pb-2 text-gray-800">ที่อยู่</h3>
+              <p>123 ถนนสุขุมวิท, แขวงคลองเตย, เขตคลองเตย, กรุงเทพมหานคร 10110</p>
+            </div>
+
+            <div class="contact-group mb-8">
+              <h3 class="text-xl font-bold mb-4 relative pb-2 text-gray-800">ติดต่อโดยตรง</h3>
+              <div class="contact-methods flex flex-col gap-3">
+                <a href="tel:+6621234567" class="contact-method flex items-center gap-3 hover:text-red-600 transition">
+                  <span class="contact-icon bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center">📞</span>
+                  <span>02-123-4567</span>
+                </a>
+                <a href="tel:+66812345678" class="contact-method flex items-center gap-3 hover:text-red-600 transition">
+                  <span class="contact-icon bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center">📱</span>
+                  <span>081-234-5678</span>
+                </a>
+                <a href="mailto:contact@saithongwassaduphan.com" class="contact-method flex items-center gap-3 hover:text-red-600 transition">
+                  <span class="contact-icon bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center">✉️</span>
+                  <span>contact@saithongwassaduphan.com</span>
+                </a>
+                <a href="#" class="contact-method flex items-center gap-3 hover:text-red-600 transition">
+                  <span class="contact-icon bg-gray-100 w-8 h-8 rounded-full flex items-center justify-center">💬</span>
+                  <span>LINE: @saithong</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-group">
+              <h3 class="text-xl font-bold mb-4 relative pb-2 text-gray-800">ติดตามเรา</h3>
+              <div class="social-links flex gap-4">
+                <a href="#" class="social-link text-white px-4 py-2 rounded text-sm">Facebook</a>
+                <a href="#" class="social-link text-white px-4 py-2 rounded text-sm">Instagram</a>
+                <a href="#" class="social-link text-white px-4 py-2 rounded text-sm">YouTube</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container h-72 bg-gray-200 rounded-lg flex items-center justify-center">
+            <p>แผนที่จะแสดงตรงนี้</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="footer-column">
+          <h3 class="text-red-500 text-lg font-bold mb-5">ไทยทอง วัสดุภัณฑ์</h3>
+          <ul>
+            <li class="mb-2"><a href="#company-info" class="hover:text-red-400 transition">ข้อมูลบริษัท</a></li>
+            <li class="mb-2"><a href="#about-us" class="hover:text-red-400 transition">เกี่ยวกับเรา</a></li>
+            <li class="mb-2"><a href="#services" class="hover:text-red-400 transition">บริการของเรา</a></li>
+            <li class="mb-2"><a href="#products" class="hover:text-red-400 transition">สินค้า</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="text-red-500 text-lg font-bold mb-5">บริการของเรา</h3>
+          <ul>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">จำหน่ายวัสดุก่อสร้าง</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">จำหน่ายเครื่องมือช่าง</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">บริการจัดส่ง</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">ให้คำปรึกษา</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="text-red-500 text-lg font-bold mb-5">หมวดหมู่สินค้า</h3>
+          <ul>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">วัสดุก่อสร้าง</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">เครื่องมือช่าง</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">อุปกรณ์ประปา</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">สีทาบ้าน</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="text-red-500 text-lg font-bold mb-5">ติดต่อเรา</h3>
+          <ul>
+            <li class="mb-2"><a href="tel:+6621234567" class="hover:text-red-400 transition">02-123-4567</a></li>
+            <li class="mb-2"><a href="mailto:contact@saithongwassaduphan.com" class="hover:text-red-400 transition">contact@saithongwassaduphan.com</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">LINE: @saithong</a></li>
+            <li class="mb-2"><a href="#" class="hover:text-red-400 transition">Facebook: Sai Thong</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom pt-8 border-t border-gray-700 text-center text-sm">
+        <p>© 2566 ไทยทอง วัสดุภัณฑ์. สงวนลิขสิทธิ์</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+      }
+
+      // Smooth scrolling for navigation links
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu after clicking a link
+            if (navMenu.classList.contains('active')) {
+              navMenu.classList.remove('active');
+            }
+          }
+        });
+      });
+
+      // Banner button click event
+      const bannerButton = document.querySelector('.banner-button');
+      
+      if (bannerButton) {
+        bannerButton.addEventListener('click', function() {
+          const contactSection = document.querySelector('#contact');
+          
+          if (contactSection) {
+            window.scrollTo({
+              top: contactSection.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+
+      // Products slider functionality
+      const slider = document.getElementById('productsSlider');
+      const prevButton = document.getElementById('prevButton');
+      const nextButton = document.getElementById('nextButton');
+      
+      if (slider && prevButton && nextButton) {
+        const cardWidth = 300; // Width of card + margin
+        
+        prevButton.addEventListener('click', function() {
+          slider.scrollBy({
+            left: -cardWidth,
+            behavior: 'smooth'
+          });
+        });
+        
+        nextButton.addEventListener('click', function() {
+          slider.scrollBy({
+            left: cardWidth,
+            behavior: 'smooth'
+          });
+        });
+        
+        // Touch swipe functionality for mobile
+        let startX;
+        let scrollLeft;
+        
+        slider.addEventListener('touchstart', function(e) {
+          startX = e.touches[0].pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        }, { passive: true });
+        
+        slider.addEventListener('touchmove', function(e) {
+          if (!startX) return;
+          const x = e.touches[0].pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2; // Scroll speed multiplier
+          slider.scrollLeft = scrollLeft - walk;
+        }, { passive: true });
+        
+        slider.addEventListener('touchend', function() {
+          startX = null;
+        });
+      }
+
+      // Category filter functionality
+      const filterTags = document.querySelectorAll('.filter-tag');
+      const productCards = document.querySelectorAll('.product-card');
+      
+      filterTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+          // Remove active class from all tags
+          filterTags.forEach(t => t.classList.remove('active'));
+          
+          // Add active class to clicked tag
+          this.classList.add('active');
+          
+          const selectedCategory = this.textContent.trim();
+          
+          // Filter products
+          productCards.forEach(card => {
+            if (selectedCategory === 'ทั้งหมด' || card.querySelector('h3').textContent.includes(selectedCategory)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

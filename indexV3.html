@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โสภณ ฮาร์ดแวร์ - ท่อ อุปกรณ์ประปา เครื่องมือช่าง ปลีก-ส่ง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: #ef4444;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-divider {
+            border-top: 2px solid #ef4444;
+            width: 100px;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-red-600 text-white p-2 rounded mr-3">
+                    <i class="fas fa-tools text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-red-600">โสภณ ฮาร์ดแวร์</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-800 font-medium hover:text-red-600 transition">หน้าหลัก</a>
+                <a href="#about" class="nav-link text-gray-800 font-medium hover:text-red-600 transition">เกี่ยวกับเรา</a>
+                <a href="#services" class="nav-link text-gray-800 font-medium hover:text-red-600 transition">บริการของเรา</a>
+                <a href="#products" class="nav-link text-gray-800 font-medium hover:text-red-600 transition">สินค้า</a>
+                <a href="#contact" class="nav-link text-gray-800 font-medium hover:text-red-600 transition">ติดต่อเรา</a>
+            </nav>
+            
+            <button class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">โสภณ ฮาร์ดแวร์</h2>
+                <h3 class="text-2xl text-red-600 font-semibold mb-6">ผู้เชี่ยวชาญด้านท่อและอุปกรณ์ประปา</h3>
+                <p class="text-gray-700 mb-8 text-lg leading-relaxed">
+                    ให้บริการจำหน่ายท่อและอุปกรณ์ประปา เครื่องมือช่างครบวงจร ทั้งแบบปลีกและส่ง 
+                    ด้วยสินค้าคุณภาพและบริการที่ประทับใจ
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition">ติดต่อเรา</a>
+                    <a href="#products" class="border border-red-600 text-red-600 hover:bg-red-50 px-6 py-3 rounded-lg font-medium transition">ดูสินค้า</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                     alt="โสภณ ฮาร์ดแวร์" class="rounded-lg shadow-xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">เกี่ยวกับเรา</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    โสภณ ฮาร์ดแวร์ ก่อตั้งขึ้นด้วยความมุ่งมั่นที่จะเป็นผู้ให้บริการด้านท่อและอุปกรณ์ประปาที่ดีที่สุด
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1581093450021-33a57e90b2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="เกี่ยวกับโสภณ ฮาร์ดแวร์" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">ประวัติความเป็นมา</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        โสภณ ฮาร์ดแวร์ก่อตั้งขึ้นในปี 2545 ด้วยความมุ่งมั่นที่จะเป็นผู้ให้บริการด้านท่อและอุปกรณ์ประปาที่ดีที่สุด 
+                        เรามีประสบการณ์มากกว่า 20 ปีในวงการนี้ และได้พัฒนาตัวเองอย่างต่อเนื่องเพื่อตอบสนองความต้องการของลูกค้า
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        เราคัดสรรสินค้าคุณภาพจากผู้ผลิตชั้นนำทั้งในและต่างประเทศ เพื่อให้ลูกค้าได้รับสินค้าที่มีคุณภาพและมาตรฐานสูงสุด
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="text-red-600 mb-2">
+                                <i class="fas fa-medal text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">สินค้าคุณภาพ</h4>
+                            <p class="text-sm text-gray-600">คัดสรรจากผู้ผลิตชั้นนำ</p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="text-red-600 mb-2">
+                                <i class="fas fa-truck text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">บริการส่งด่วน</h4>
+                            <p class="text-sm text-gray-600">จัดส่งรวดเร็วทั่วประเทศ</p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="text-red-600 mb-2">
+                                <i class="fas fa-headset text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">บริการหลังการขาย</h4>
+                            <p class="text-sm text-gray-600">พร้อมให้คำปรึกษาตลอดเวลา</p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="text-red-600 mb-2">
+                                <i class="fas fa-tags text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">ราคายุติธรรม</h4>
+                            <p class="text-sm text-gray-600">ทั้งปลีกและส่ง</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">บริการของเรา</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    เรามอบบริการครบวงจรเพื่อตอบสนองความต้องการของลูกค้าทุกประเภท
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-store text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">บริการจำหน่ายปลีก</h3>
+                    <p class="text-gray-600">
+                        จำหน่ายสินค้าปลีกสำหรับลูกค้าทั่วไป ด้วยราคายุติธรรมและบริการที่เป็นกันเอง
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-boxes text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">บริการจำหน่ายส่ง</h3>
+                    <p class="text-gray-600">
+                        จำหน่ายสินค้าแบบส่งสำหรับร้านค้าและโครงการต่างๆ ในราคาพิเศษ
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-truck-loading text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">บริการจัดส่ง</h3>
+                    <p class="text-gray-600">
+                        บริการจัดส่งสินค้าอย่างรวดเร็วและปลอดภัยทั่วประเทศ
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">บริการติดตั้ง</h3>
+                    <p class="text-gray-600">
+                        ให้บริการติดตั้งระบบประปาโดยช่างผู้ชำนาญการ
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-clipboard-check text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">บริการให้คำปรึกษา</h3>
+                    <p class="text-gray-600">
+                        ให้คำแนะนำและคำปรึกษาด้านระบบประปาและเครื่องมือช่าง
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-warehouse text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">บริการสั่งสินค้าพิเศษ</h3>
+                    <p class="text-gray-600">
+                        สั่งสินค้าตามความต้องการพิเศษของลูกค้า
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">สินค้าของเรา</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    เราคัดสรรสินค้าคุณภาพจากผู้ผลิตชั้นนำเพื่อตอบสนองความต้องการทุกประเภท
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                             alt="ท่อ PVC" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">ท่อ PVC</h3>
+                        <p class="text-gray-600 text-sm mb-3">ท่อ PVC คุณภาพสูง สำหรับงานประปาทุกประเภท</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-medium">เริ่มต้น 50 บาท</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" 
+                             alt="ท่อเหล็ก" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">ท่อเหล็ก</h3>
+                        <p class="text-gray-600 text-sm mb-3">ท่อเหล็กเกรดสูง สำหรับงานอุตสาหกรรม</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-medium">เริ่มต้น 150 บาท</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563213126-a4273a1f59f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" 
+                             alt="อุปกรณ์ประปา" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">อุปกรณ์ประปา</h3>
+                        <p class="text-gray-600 text-sm mb-3">อุปกรณ์ประปาคุณภาพสูงจากแบรนด์ชั้นนำ</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-medium">เริ่มต้น 30 บาท</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d507a95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="เครื่องมือช่าง" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">เครื่องมือช่าง</h3>
+                        <p class="text-gray-600 text-sm mb-3">เครื่องมือช่างคุณภาพสูงสำหรับทุกงาน</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-medium">เริ่มต้น 100 บาท</span>
+                            <button class="text-red-600 hover:text-red-700">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                    ดูสินค้าทั้งหมด <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">ติดต่อเรา</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    เรายินดีให้บริการและตอบคำถามทุกข้อสงสัยของท่าน
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">ส่งข้อความถึงเรา</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">ชื่อ-นามสกุล</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">อีเมล</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">เบอร์โทรศัพท์</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">ข้อความ</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium transition">
+                                ส่งข้อความ
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">ข้อมูลติดต่อ</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-red-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">ที่อยู่</h4>
+                                    <p class="text-gray-600">123 ถนนสุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพมหานคร 10110</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">โทรศัพท์</h4>
+                                    <p class="text-gray-600">02-123-4567</p>
+                                    <p class="text-gray-600">081-234-5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">อีเมล</h4>
+                                    <p class="text-gray-600">info@sophonhardware.com</p>
+                                    <p class="text-gray-600">sales@sophonhardware.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red-600 mr-4 mt-1">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">เวลาทำการ</h4>
+                                    <p class="text-gray-600">จันทร์-ศุกร์: 08:00 - 17:30 น.</p>
+                                    <p class="text-gray-600">เสาร์: 08:00 - 12:00 น.</p>
+                                    <p class="text-gray-600">หยุดวันอาทิตย์และวันหยุดนักขัตฤกษ์</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-4">ติดตามเรา</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition">
+                                    <i class="fab fa-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="bg-white py-8">
+        <div class="container mx-auto px-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.511556447673!2d100.5658313153438!3d13.7463906013842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29edcfb15ea2d%3A0x3e77a1b2a7c85bf6!2sHD%20Thai%20Pipe%20Co.%2C%20Ltd.!5e0!3m2!1sen!2sth!4v1621234567890!5m2!1sen!2sth" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg shadow-md"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">โสภณ ฮาร์ดแวร์</h3>
+                    <p class="text-gray-300 mb-4">
+                        ผู้เชี่ยวชาญด้านท่อและอุปกรณ์ประปา เครื่องมือช่างครบวงจร 
+                        ทั้งแบบปลีกและส่ง ด้วยสินค้าคุณภาพและบริการที่ประทับใจ
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-line"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">เมนู</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition">หน้าหลัก</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition">เกี่ยวกับเรา</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition">บริการของเรา</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition">สินค้า</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">สินค้า</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">ท่อ PVC</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">ท่อเหล็ก</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">อุปกรณ์ประปา</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">เครื่องมือช่าง</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">สินค้าทั้งหมด</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">ติดต่อเรา</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-1 mr-2"></i>
+                            <span class="text-gray-300">123 ถนนสุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพมหานคร 10110</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-red-400 mr-2"></i>
+                            <span class="text-gray-300">02-123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-red-400 mr-2"></i>
+                            <span class="text-gray-300">info@sophonhardware.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 โสภณ ฮาร์ดแวร์. สงวนลิขสิทธิ์ทุกประการ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle (would need more implementation)
+        const mobileMenuButton = document.querySelector('button.md\\:hidden');
+        mobileMenuButton.addEventListener('click', () => {
+            alert('Mobile menu would open here in a full implementation');
+        });
+    </script>
+</body>
+</html>
