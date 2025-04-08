@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สินค้าทั้งหมด | โสภณ ฮาร์ดแวร์</title>
+    <title>ราคาท่อ PVC | โสภณ ฮาร์ดแวร์</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,24 +14,38 @@
             scroll-behavior: smooth;
         }
         
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        .price-table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .price-table th {
+            position: sticky;
+            top: 0;
+            background-color: #b91c1c;
+            color: white;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        .price-table tr:hover {
+            background-color: #fee2e2;
         }
         
         .nav-link:hover {
             color: #fecaca !important;
         }
         
-        .category-btn.active {
+        .tab-btn.active {
             background-color: #b91c1c;
             color: white;
         }
         
-        .pagination-btn.active {
-            background-color: #b91c1c;
-            color: white;
-            border-color: #b91c1c;
+        .scrollable-table {
+            max-height: 600px;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -47,8 +61,8 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link text-white hover:text-red-200 font-medium transition">หน้าแรก</a>
                 <a href="product.html" class="nav-link text-white hover:text-red-200 font-medium transition">สินค้า</a>
+                <a href="pipe-price.html" class="nav-link text-white hover:text-red-200 font-medium transition border-b-2 border-white">ราคาท่อ PVC</a>
                 <a href="index.html#about" class="nav-link text-white hover:text-red-200 font-medium transition">เกี่ยวกับเรา</a>
-                <a href="index.html#services" class="nav-link text-white hover:text-red-200 font-medium transition">บริการ</a>
                 <a href="index.html#contact" class="nav-link text-white hover:text-red-200 font-medium transition">ติดต่อเรา</a>
             </nav>
             
@@ -68,8 +82,8 @@
             <div class="container mx-auto px-4 flex flex-col space-y-3">
                 <a href="index.html" class="text-white hover:text-red-200 font-medium transition">หน้าแรก</a>
                 <a href="product.html" class="text-white hover:text-red-200 font-medium transition">สินค้า</a>
+                <a href="pipe-price.html" class="text-white hover:text-red-200 font-medium transition border-b-2 border-white">ราคาท่อ PVC</a>
                 <a href="index.html#about" class="text-white hover:text-red-200 font-medium transition">เกี่ยวกับเรา</a>
-                <a href="index.html#services" class="text-white hover:text-red-200 font-medium transition">บริการ</a>
                 <a href="index.html#contact" class="text-white hover:text-red-200 font-medium transition">ติดต่อเรา</a>
             </div>
         </div>
@@ -89,7 +103,7 @@
                     <li aria-current="page">
                         <div class="flex items-center">
                             <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
-                            <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">สินค้าทั้งหมด</span>
+                            <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">ราคาท่อ PVC</span>
                         </div>
                     </li>
                 </ol>
@@ -97,376 +111,408 @@
         </div>
     </div>
 
-    <!-- Product Page Content -->
+    <!-- Main Content -->
     <main class="py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row gap-8">
-                <!-- Sidebar Filters -->
-                <aside class="md:w-1/4">
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">ค้นหาสินค้า</h3>
-                        
-                        <!-- Search Box -->
-                        <div class="mb-6">
-                            <div class="relative">
-                                <input type="text" placeholder="ค้นหาสินค้า..." 
-                                    class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
-                                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-                            </div>
-                        </div>
-                        
-                        <!-- Categories -->
-                        <div class="mb-6">
-                            <h4 class="font-bold text-gray-700 mb-3">หมวดหมู่สินค้า</h4>
-                            <ul class="space-y-2">
-                                <li>
-                                    <button class="category-btn active w-full text-left px-3 py-2 rounded-md hover:bg-red-50 hover:text-red-700 transition" data-category="all">
-                                        <i class="fas fa-boxes mr-2"></i>สินค้าทั้งหมด
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="category-btn w-full text-left px-3 py-2 rounded-md hover:bg-red-50 hover:text-red-700 transition" data-category="pvc">
-                                        <i class="fas fa-pipe mr-2"></i>ท่อ PVC
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="category-btn w-full text-left px-3 py-2 rounded-md hover:bg-red-50 hover:text-red-700 transition" data-category="plumbing">
-                                        <i class="fas fa-faucet mr-2"></i>อุปกรณ์ประปา
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="category-btn w-full text-left px-3 py-2 rounded-md hover:bg-red-50 hover:text-red-700 transition" data-category="tools">
-                                        <i class="fas fa-tools mr-2"></i>เครื่องมือช่าง
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="category-btn w-full text-left px-3 py-2 rounded-md hover:bg-red-50 hover:text-red-700 transition" data-category="ppr">
-                                        <i class="fas fa-pipe mr-2"></i>ท่อ PP-R
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="category-btn w-full text-left px-3 py-2 rounded-md hover:bg-red-50 hover:text-red-700 transition" data-category="wire">
-                                        <i class="fas fa-bolt mr-2"></i>ท่อร้อยสาย
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Price Filter -->
-                        <div class="mb-6">
-                            <h4 class="font-bold text-gray-700 mb-3">ช่วงราคา</h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center">
-                                    <input id="price-all" type="radio" name="price" class="h-4 w-4 text-red-600 focus:ring-red-500" checked>
-                                    <label for="price-all" class="ml-2 text-gray-700">ทั้งหมด</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="price-1" type="radio" name="price" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="price-1" class="ml-2 text-gray-700">ต่ำกว่า 100 บาท</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="price-2" type="radio" name="price" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="price-2" class="ml-2 text-gray-700">100 - 500 บาท</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="price-3" type="radio" name="price" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="price-3" class="ml-2 text-gray-700">500 - 1,000 บาท</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="price-4" type="radio" name="price" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="price-4" class="ml-2 text-gray-700">สูงกว่า 1,000 บาท</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Brand Filter -->
-                        <div class="mb-6">
-                            <h4 class="font-bold text-gray-700 mb-3">แบรนด์</h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center">
-                                    <input id="brand-all" type="checkbox" class="h-4 w-4 text-red-600 focus:ring-red-500" checked>
-                                    <label for="brand-all" class="ml-2 text-gray-700">ทั้งหมด</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="brand-scg" type="checkbox" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="brand-scg" class="ml-2 text-gray-700">SCG</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="brand-sanwa" type="checkbox" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="brand-sanwa" class="ml-2 text-gray-700">Sanwa</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="brand-toto" type="checkbox" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="brand-toto" class="ml-2 text-gray-700">TOTO</label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input id="brand-cotto" type="checkbox" class="h-4 w-4 text-red-600 focus:ring-red-500">
-                                    <label for="brand-cotto" class="ml-2 text-gray-700">COTTO</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button class="w-full bg-red-700 hover:bg-red-800 text-white py-2 px-4 rounded-md transition">
-                            <i class="fas fa-filter mr-2"></i>กรองสินค้า
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">ราคาท่อ PVC ล่าสุด</h2>
+                
+                <div class="mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="tab-btn active px-4 py-2 rounded-md font-medium" data-tab="pvc-pipe">
+                            ท่อ PVC
+                        </button>
+                        <button class="tab-btn px-4 py-2 rounded-md font-medium" data-tab="pvc-fitting">
+                            อุปกรณ์ข้อต่อ
+                        </button>
+                        <button class="tab-btn px-4 py-2 rounded-md font-medium" data-tab="ppr-pipe">
+                            ท่อ PP-R
+                        </button>
+                        <button class="tab-btn px-4 py-2 rounded-md font-medium" data-tab="conduit-pipe">
+                            ท่อร้อยสาย
                         </button>
                     </div>
-                    
-                    <!-- Special Offers -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 mt-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">สินค้าแนะนำ</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-md transition">
-                                <img src="https://via.placeholder.com/60" alt="Product" class="w-16 h-16 object-cover rounded">
-                                <div>
-                                    <h4 class="font-medium text-gray-800">ท่อ PVC 2 นิ้ว</h4>
-                                    <p class="text-red-700 font-bold">฿120</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-md transition">
-                                <img src="https://via.placeholder.com/60" alt="Product" class="w-16 h-16 object-cover rounded">
-                                <div>
-                                    <h4 class="font-medium text-gray-800">เครื่องตัดท่อ PVC</h4>
-                                    <p class="text-red-700 font-bold">฿850</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-3 p-2 hover:bg-gray-50 rounded-md transition">
-                                <img src="https://via.placeholder.com/60" alt="Product" class="w-16 h-16 object-cover rounded">
-                                <div>
-                                    <h4 class="font-medium text-gray-800">ก๊อกน้ำประปา</h4>
-                                    <p class="text-red-700 font-bold">฿320</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
+                </div>
                 
-                <!-- Main Product Listing -->
-                <div class="md:w-3/4">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4 md:mb-0">สินค้าทั้งหมด</h2>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-center">
-                                <span class="text-gray-600 mr-2">เรียงตาม:</span>
-                                <select class="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-red-500">
-                                    <option>สินค้ามาใหม่</option>
-                                    <option>ราคาต่ำ-สูง</option>
-                                    <option>ราคาสูง-ต่ำ</option>
-                                    <option>ขายดี</option>
-                                    <option>คะแนนรีวิว</option>
-                                </select>
-                            </div>
-                            
-                            <div class="hidden md:flex items-center">
-                                <span class="text-gray-600 mr-2">แสดง:</span>
-                                <select class="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-red-500">
-                                    <option>12 รายการ</option>
-                                    <option>24 รายการ</option>
-                                    <option>36 รายการ</option>
-                                    <option>ทั้งหมด</option>
-                                </select>
-                            </div>
+                <!-- Last Update -->
+                <div class="mb-6 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle text-yellow-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                <span class="font-bold">อัพเดตล่าสุด:</span> 15 มกราคม 2567 | ราคาอาจมีการเปลี่ยนแปลงได้ตามสถานการณ์ตลาด
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PVC Pipe Price Table -->
+                <div id="pvc-pipe-tab" class="tab-content">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ราคาท่อ PVC ประเภทต่าง ๆ</h3>
+                        <p class="text-gray-600">ท่อ PVC มาตรฐาน SCG คุณภาพสูง หนา 3.2 มม. ยาว 4 เมตร</p>
+                    </div>
+                    
+                    <div class="scrollable-table border border-gray-200 rounded-lg">
+                        <table class="price-table w-full">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 text-left">ขนาดท่อ (นิ้ว)</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อเส้น</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อมัด (10 เส้น)</th>
+                                    <th class="py-3 px-4 text-right">ราคา 100 เส้น</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿45</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿430</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿4,200</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">3/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿60</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿580</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿5,700</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿85</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿820</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿8,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿120</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿1,160</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿11,500</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿160</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿1,550</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿15,200</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿240</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿2,320</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿22,800</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">2 1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿380</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿3,680</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿36,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">3"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿520</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿5,040</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿49,500</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿850</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿8,240</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿81,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-4 text-sm text-gray-500">
+                        <p>* ราคาดังกล่าวไม่รวมภาษีมูลค่าเพิ่ม 7%</p>
+                        <p>* ราคาอาจเปลี่ยนแปลงได้โดยไม่ต้องแจ้งให้ทราบล่วงหน้า</p>
+                    </div>
+                </div>
+                
+                <!-- PVC Fitting Price Table (Hidden by default) -->
+                <div id="pvc-fitting-tab" class="tab-content hidden">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ราคาอุปกรณ์ข้อต่อ PVC</h3>
+                        <p class="text-gray-600">อุปกรณ์ข้อต่อท่อ PVC มาตรฐาน SCG คุณภาพสูง</p>
+                    </div>
+                    
+                    <div class="scrollable-table border border-gray-200 rounded-lg">
+                        <table class="price-table w-full">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 text-left">รายการ</th>
+                                    <th class="py-3 px-4 text-left">ขนาด (นิ้ว)</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อชิ้น</th>
+                                    <th class="py-3 px-4 text-right">ราคา 10 ชิ้น</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อตรง</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿8</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿75</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อตรง</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">3/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿10</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿95</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อตรง</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿15</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿145</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อตรง</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿20</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿195</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อตรง</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿25</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿240</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อตรง</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿35</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿340</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อ 90 องศา</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿12</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿115</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อ 90 องศา</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">3/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿15</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿145</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อ 90 องศา</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿20</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿195</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อ 45 องศา</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿10</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿95</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อ 45 องศา</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">3/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿12</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿115</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">ข้อต่อ 45 องศา</td>
+                                    <td class="py-3 px-4 border-b border-gray-200">1"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿15</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿145</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- PP-R Pipe Price Table (Hidden by default) -->
+                <div id="ppr-pipe-tab" class="tab-content hidden">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ราคาท่อ PP-R</h3>
+                        <p class="text-gray-600">ท่อ PP-R สำหรับระบบน้ำร้อนและน้ำเย็น มาตรฐาน SCG</p>
+                    </div>
+                    
+                    <div class="scrollable-table border border-gray-200 rounded-lg">
+                        <table class="price-table w-full">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 text-left">ขนาดท่อ (นิ้ว)</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อเส้น (4 เมตร)</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อมัด (10 เส้น)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿120</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿1,160</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">3/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿180</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿1,740</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿280</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿2,720</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿420</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿4,080</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿580</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿5,640</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿850</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿8,240</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Conduit Pipe Price Table (Hidden by default) -->
+                <div id="conduit-pipe-tab" class="tab-content hidden">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ราคาท่อร้อยสายไฟ PVC</h3>
+                        <p class="text-gray-600">ท่อร้อยสายไฟ PVC มาตรฐาน มอก.</p>
+                    </div>
+                    
+                    <div class="scrollable-table border border-gray-200 rounded-lg">
+                        <table class="price-table w-full">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 text-left">ขนาดท่อ (นิ้ว)</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อเส้น (3 เมตร)</th>
+                                    <th class="py-3 px-4 text-right">ราคาต่อมัด (10 เส้น)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿35</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿340</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">3/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿50</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿480</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿75</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿720</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/4"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿110</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿1,060</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">1 1/2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿150</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿1,450</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">2"</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿220</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">฿2,140</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Note -->
+            <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">หมายเหตุเกี่ยวกับราคา</h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fas fa-truck text-red-600"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold text-gray-800">ค่าจัดส่ง</h4>
+                            <p class="text-gray-600 mt-1">ค่าจัดส่งขึ้นอยู่กับระยะทางและปริมาณสินค้า กรุณาติดต่อสอบถามรายละเอียดเพิ่มเติม</p>
                         </div>
                     </div>
                     
-                    <!-- Product Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Product 1 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ท่อ PVC ขนาด 2 นิ้ว" class="w-full h-48 object-cover">
-                                <div class="absolute top-2 right-2 bg-red-700 text-white text-xs px-2 py-1 rounded">
-                                    ยอดนิยม
-                                </div>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ท่อ PVC ขนาด 2 นิ้ว</h3>
-                                <p class="text-gray-600 text-sm mb-3">ท่อ PVC คุณภาพสูง มาตรฐานอุตสาหกรรม หนา 3.2 มม. ยาว 4 เมตร</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿120/เส้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fas fa-percentage text-red-600"></i>
                         </div>
-                        
-                        <!-- Product 2 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ข้อต่อ PVC 90 องศา" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ข้อต่อ PVC 90 องศา</h3>
-                                <p class="text-gray-600 text-sm mb-3">ข้อต่อ PVC มุม 90 องศา ขนาด 2 นิ้ว ผลิตจากวัสดุคุณภาพสูง</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿45/ชิ้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 3 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="เครื่องตัดท่อ PVC" class="w-full h-48 object-cover">
-                                <div class="absolute top-2 right-2 bg-red-700 text-white text-xs px-2 py-1 rounded">
-                                    สินค้าใหม่
-                                </div>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">เครื่องตัดท่อ PVC</h3>
-                                <p class="text-gray-600 text-sm mb-3">เครื่องมือตัดท่อ PVC ขนาด 1/2-4 นิ้ว ใช้งานง่าย คม ทนทาน</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿850/เครื่อง</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 4 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ก๊อกน้ำประปา" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ก๊อกน้ำประปา</h3>
-                                <p class="text-gray-600 text-sm mb-3">ก๊อกน้ำประปาคุณภาพสูง วัสดุสแตนเลส ใช้งานได้ยาวนาน</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿320/ชิ้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 5 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ท่อ PVC ขนาด 4 นิ้ว" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ท่อ PVC ขนาด 4 นิ้ว</h3>
-                                <p class="text-gray-600 text-sm mb-3">ท่อ PVC มาตรฐานอุตสาหกรรม หนา 4.2 มม. ยาว 4 เมตร</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿280/เส้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 6 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="เครื่องมือช่างชุดใหญ่" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">เครื่องมือช่างชุดใหญ่</h3>
-                                <p class="text-gray-600 text-sm mb-3">ชุดเครื่องมือช่างครบวงจร 32 ชิ้น สำหรับงานประปาและก่อสร้าง</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿1,250/ชุด</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 7 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ท่อ PP-R ขนาด 1 นิ้ว" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ท่อ PP-R ขนาด 1 นิ้ว</h3>
-                                <p class="text-gray-600 text-sm mb-3">ท่อน้ำร้อน PP-R มาตรฐาน หนา 2.7 มม. ยาว 4 เมตร</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿180/เส้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 8 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ข้อต่อ PP-R" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ข้อต่อ PP-R</h3>
-                                <p class="text-gray-600 text-sm mb-3">ข้อต่อท่อ PP-R ขนาด 1 นิ้ว สำหรับงานระบบน้ำร้อนและน้ำเย็น</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿65/ชิ้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Product 9 -->
-                        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
-                            <div class="relative">
-                                <img src="https://via.placeholder.com/300x200" alt="ท่อร้อยสายไฟ" class="w-full h-48 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-2">ท่อร้อยสายไฟ</h3>
-                                <p class="text-gray-600 text-sm mb-3">ท่อร้อยสายไฟ PVC ขนาด 3/4 นิ้ว ยาว 3 เมตร มาตรฐาน มอก.</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-red-700">฿95/เส้น</span>
-                                    <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
-                                        <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
-                                    </button>
-                                </div>
-                            </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold text-gray-800">ส่วนลดปริมาณ</h4>
+                            <p class="text-gray-600 mt-1">สำหรับลูกค้าสั่งซื้อจำนวนมาก สามารถเจรจาราคาพิเศษได้ โปรดติดต่อฝ่ายขาย</p>
                         </div>
                     </div>
                     
-                    <!-- Pagination -->
-                    <div class="mt-10 flex justify-center">
-                        <nav class="inline-flex rounded-md shadow">
-                            <ul class="flex">
-                                <li>
-                                    <button class="pagination-btn px-3 py-1 rounded-l-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="pagination-btn active px-3 py-1 border-t border-b border-gray-300 bg-red-700 text-white">
-                                        1
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="pagination-btn px-3 py-1 border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
-                                        2
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="pagination-btn px-3 py-1 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
-                                        3
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="pagination-btn px-3 py-1 border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
-                                        4
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="pagination-btn px-3 py-1 rounded-r-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fas fa-calendar-alt text-red-600"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h4 class="font-semibold text-gray-800">การอัพเดตราคา</h4>
+                            <p class="text-gray-600 mt-1">เราอัพเดตราคาสินค้าทุกสัปดาห์ เพื่อให้ลูกค้าได้รับข้อมูลที่ถูกต้องที่สุด</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">สอบถามข้อมูลเพิ่มเติม</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone-alt text-red-600 mr-3"></i>
+                            <h4 class="font-semibold text-gray-800">โทรศัพท์</h4>
+                        </div>
+                        <div class="ml-8">
+                            <p class="text-gray-600">092-687-7304</p>
+                            <p class="text-gray-600">086-415-3561</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-map-marker-alt text-red-600 mr-3"></i>
+                            <h4 class="font-semibold text-gray-800">ที่ตั้งร้าน</h4>
+                        </div>
+                        <div class="ml-8">
+                            <p class="text-gray-600">123 ถนนสุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพฯ 10110</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-clock text-red-600 mr-3"></i>
+                            <h4 class="font-semibold text-gray-800">เวลาทำการ</h4>
+                        </div>
+                        <div class="ml-8">
+                            <p class="text-gray-600">จันทร์-เสาร์: 08:00 - 17:30 น.</p>
+                            <p class="text-gray-600">อาทิตย์: ปิดทำการ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-envelope text-red-600 mr-3"></i>
+                            <h4 class="font-semibold text-gray-800">อีเมล</h4>
+                        </div>
+                        <div class="ml-8">
+                            <p class="text-gray-600">info@sophonhardware.com</p>
+                            <p class="text-gray-600">sales@sophonhardware.com</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -491,8 +537,8 @@
                         <ul class="space-y-2">
                             <li><a href="index.html" class="text-gray-400 hover:text-white transition">หน้าแรก</a></li>
                             <li><a href="product.html" class="text-gray-400 hover:text-white transition">สินค้า</a></li>
+                            <li><a href="pipe-price.html" class="text-gray-400 hover:text-white transition">ราคาท่อ PVC</a></li>
                             <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">เกี่ยวกับเรา</a></li>
-                            <li><a href="index.html#services" class="text-gray-400 hover:text-white transition">บริการ</a></li>
                             <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">ติดต่อเรา</a></li>
                         </ul>
                     </div>
@@ -566,45 +612,29 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
-        // Category Buttons
-        const categoryButtons = document.querySelectorAll('.category-btn');
+        // Tab Switching
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
         
-        categoryButtons.forEach(button => {
+        tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                categoryButtons.forEach(btn => {
+                const tabId = button.dataset.tab;
+                
+                // Update active tab button
+                tabButtons.forEach(btn => {
                     btn.classList.remove('active', 'bg-red-700', 'text-white');
-                    btn.classList.add('hover:bg-red-50', 'hover:text-red-700');
+                    btn.classList.add('bg-gray-100', 'text-gray-800', 'hover:bg-gray-200');
                 });
                 
                 button.classList.add('active', 'bg-red-700', 'text-white');
-                button.classList.remove('hover:bg-red-50', 'hover:text-red-700');
+                button.classList.remove('bg-gray-100', 'text-gray-800', 'hover:bg-gray-200');
                 
-                // Here you would filter products based on category
-                // This is just a placeholder for the functionality
-                const category = button.dataset.category;
-                console.log(`Filtering by category: ${category}`);
-            });
-        });
-        
-        // Pagination Buttons
-        const paginationButtons = document.querySelectorAll('.pagination-btn');
-        
-        paginationButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                paginationButtons.forEach(btn => {
-                    btn.classList.remove('active', 'bg-red-700', 'text-white', 'border-red-700');
-                    btn.classList.add('bg-white', 'text-gray-500', 'hover:bg-gray-50');
+                // Show selected tab content
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
                 });
                 
-                if (!button.querySelector('i')) {
-                    button.classList.add('active', 'bg-red-700', 'text-white', 'border-red-700');
-                    button.classList.remove('bg-white', 'text-gray-500', 'hover:bg-gray-50');
-                }
-                
-                // Here you would load the appropriate page of products
-                // This is just a placeholder for the functionality
-                const page = button.textContent.trim();
-                console.log(`Loading page: ${page}`);
+                document.getElementById(`${tabId}-tab`).classList.remove('hidden');
             });
         });
         
