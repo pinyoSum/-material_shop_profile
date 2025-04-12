@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="โสภณ ฮาร์ดแวร์ - ท่อ อุปกรณ์ประปา เครื่องมือช่าง ปลีก-ส่ง">
+    <meta name="keywords" content="โสภณ ฮาร์ดแวร์, ร้านประปา, ท่อ PVC, ข้อต่อ, อุปกรณ์ประปา, ร้านฮาร์ดแวร์">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="โสภณ ฮาร์ดแวร์ - ท่อ อุปกรณ์ประปา เครื่องมือช่าง ปลีก-ส่ง">
+    <meta property="og:description" content="ร้านขายท่อ PVC ข้อต่อ อุปกรณ์ประปา Sanwa SCG ราคาส่ง ส่งทั่วไทย">
+    <meta property="og:image" content="https://pinyosum.github.io/material_shop_profile/imgs/logo.jpg">
+    <meta property="og:url" content="https://pinyosum.github.io/material_shop_profile/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://pinyosum.github.io/material_shop_profile/">
+    <link rel="icon" href="logo1.ico" type="image/x-icon">
+    <title>โสภณ ฮาร์ดแวร์ - ท่อ อุปกรณ์ประปา เครื่องมือช่าง ปลีก-ส่ง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans Thai', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('imgs/banner2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link:hover {
+            color: #fecaca !important;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-red-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tools text-2xl"></i>
+                <h1 class="text-2xl font-bold">โสภณ ฮาร์ดแวร์</h1>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-white hover:text-red-200 font-medium transition">หน้าแรก</a>
+                <a href="#products" class="nav-link text-white hover:text-red-200 font-medium transition">สินค้า</a>
+                <a href="#about" class="nav-link text-white hover:text-red-200 font-medium transition">เกี่ยวกับเรา</a>
+                <a href="#services" class="nav-link text-white hover:text-red-200 font-medium transition">บริการ</a>
+                <a href="#contact" class="nav-link text-white hover:text-red-200 font-medium transition">ติดต่อเรา</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button id="confirm-call"
+                    class="bg-white text-red-700 px-4 py-2 rounded-md font-medium hover:bg-red-50 transition">
+                    <i class="fas fa-phone-alt mr-2"></i>สั่งซื้อ
+                </button>
+                <button class="md:hidden text-white text-2xl" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-red-800 py-4" id="mobile-menu">
+            <div class="container mx-auto px-4 flex flex-col space-y-3">
+                <a href="#home" class="text-white hover:text-red-200 font-medium transition">หน้าแรก</a>
+                <a href="#products" class="text-white hover:text-red-200 font-medium transition">สินค้า</a>
+                <a href="#about" class="text-white hover:text-red-200 font-medium transition">เกี่ยวกับเรา</a>
+                <a href="#services" class="text-white hover:text-red-200 font-medium transition">บริการ</a>
+                <a href="#contact" class="text-white hover:text-red-200 font-medium transition">ติดต่อเรา</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">โสภณ ฮาร์ดแวร์</h1>
+            <p class="text-xl md:text-2xl">จำหน่าย ท่อPVC/อุปกรณ์ข้อต่อ/ท่อPP-R/ท่อร้อยสาย ของ SCG จัดส่งฟรี</p>
+            <p class="text-xl md:text-2xl mb-8">ถึงหน้างานทั่วประเทศ รวมทั้งสินค้าแบรนด์ Sanwa เครื่องมือช่าง
+                ราคาปลีก-ส่ง</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#products" class="bg-red-700 hover:bg-red-800 px-8 py-3 rounded-md font-medium transition">
+                    <i class="fas fa-boxes mr-2"></i>ดูสินค้า
+                </a>
+                <a href="#contact"
+                    class="bg-white text-red-700 hover:bg-gray-100 px-8 py-3 rounded-md font-medium transition">
+                    <i class="fas fa-phone-alt mr-2"></i>ติดต่อเรา
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">จัดส่งรวดเร็ว</h3>
+                    <p class="text-gray-600">บริการจัดส่งสินค้าทั่วประเทศ รับประกันความรวดเร็วและปลอดภัย</p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">สินค้าคุณภาพ</h3>
+                    <p class="text-gray-600">คัดสรรเฉพาะสินค้าคุณภาพสูง มาตรฐานอุตสาหกรรม</p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">ราคาสุดพิเศษ</h3>
+                    <p class="text-gray-600">ราคาส่งและปลีก คุ้มค่าสำหรับลูกค้าทุกระดับ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-700 mb-4">สินค้าของเรา</h2>
+                <div class="w-20 h-1 bg-red-700 mx-auto"></div>
+            </div>
+
+            <div class="mb-8 flex justify-center">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button type="button"
+                        class="product-category-btn px-4 py-2 text-sm font-medium rounded-l-lg bg-red-700 text-white">
+                        ท่อ PVC
+                    </button>
+                    <button type="button"
+                        class="product-category-btn px-4 py-2 text-sm font-medium bg-white text-red-700 border border-red-700">
+                        อุปกรณ์ประปา
+                    </button>
+                    <button type="button"
+                        class="product-category-btn px-4 py-2 text-sm font-medium bg-white text-red-700 border border-red-700">
+                        อุปกรณ์ประปา
+                    </button>
+                    <button type="button"
+                        class="product-category-btn px-4 py-2 text-sm font-medium bg-white text-red-700 border border-red-700 rounded-r-lg">
+                        เครื่องมือช่าง
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
+                    <div class="relative">
+                        <img src="imgs/product1.jpg"
+                            alt="ท่อ PVC ขนาด 2 นิ้ว" class="w-full h-48 object-cover">
+                        <!-- <div class="absolute top-2 right-2 bg-red-700 text-white text-xs px-2 py-1 rounded">
+                            ยอดนิยม
+                        </div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">ท่อ PVC ขนาด 2 นิ้ว</h3>
+                        <p class="text-gray-600 text-sm mb-3">ท่อ PVC คุณภาพสูง มาตรฐานอุตสาหกรรม หนา 3.2 มม. ยาว 4 เมตร
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-red-700">฿120/เส้น</span>
+                            <!-- <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
+                                <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
+                    <div class="relative">
+                        <img src="imgs/product2.jpg"
+                            alt="ข้อต่อ PVC 90 องศา" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">ข้อต่อ PVC 90 องศา</h3>
+                        <p class="text-gray-600 text-sm mb-3">ข้อต่อ PVC มุม 90 องศา ขนาด 2 นิ้ว ผลิตจากวัสดุคุณภาพสูง
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-red-700">฿45/ชิ้น</span>
+                            <!-- <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
+                                <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
+                    <div class="relative">
+                        <img src="imgs/product3.jpg"
+                            alt="เครื่องตัดท่อ PVC" class="w-full h-48 object-cover">
+                        <!-- <div class="absolute top-2 right-2 bg-red-700 text-white text-xs px-2 py-1 rounded">
+                            สินค้าใหม่
+                        </div> -->
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">เครื่องตัดท่อ PVC</h3>
+                        <p class="text-gray-600 text-sm mb-3">เครื่องมือตัดท่อ PVC ขนาด 1/2-4 นิ้ว ใช้งานง่าย คม ทนทาน
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-red-700">฿850/เครื่อง</span>
+                            <!-- <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
+                                <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
+                    <div class="relative">
+                        <img src="imgs/product4.jpg"
+                            alt="ก๊อกน้ำประปา" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">ก๊อกน้ำประปา</h3>
+                        <p class="text-gray-600 text-sm mb-3">ก๊อกน้ำประปาคุณภาพสูง วัสดุสแตนเลส ใช้งานได้ยาวนาน</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-red-700">฿320/ชิ้น</span>
+                            <!-- <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
+                                <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
+                    <div class="relative">
+                        <img src="imgs/product5.jpg"
+                            alt="ท่อ PVC ขนาด 4 นิ้ว" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">ท่อ PVC ขนาด 4 นิ้ว</h3>
+                        <p class="text-gray-600 text-sm mb-3">ท่อ PVC มาตรฐานอุตสาหกรรม หนา 4.2 มม. ยาว 4 เมตร</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-red-700">฿280/เส้น</span>
+                            <!-- <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
+                                <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 transition duration-300">
+                    <div class="relative">
+                        <img src="imgs/product6.jpg"
+                            alt="เครื่องมือช่างชุดใหญ่" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">เครื่องมือช่างชุดใหญ่</h3>
+                        <p class="text-gray-600 text-sm mb-3">ชุดเครื่องมือช่างครบวงจร 32 ชิ้น สำหรับงานประปาและก่อสร้าง
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-red-700">฿1,250/ชุด</span>
+                            <!-- <button class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded text-sm transition">
+                                <i class="fas fa-cart-plus mr-1"></i>สั่งซื้อ
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <button onclick="window.location.href='product.html'"
+                    class="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-md font-medium transition">
+                    <i class="fas fa-boxes mr-2"></i>ดูสินค้าทั้งหมด
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-700 mb-4">เกี่ยวกับเรา</h2>
+                <div class="w-20 h-1 bg-red-700 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="imgs/pvc.jpg" alt="โสภณ ฮาร์ดแวร์" class="rounded-lg shadow-lg w-full">
+                </div>
+
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">โสภณ ฮาร์ดแวร์ - ผู้เชี่ยวชาญด้านท่อ PVC
+                        และอุปกรณ์ประปา</h3>
+                    <p class="text-gray-600 mb-4">โสภณ ฮาร์ดแวร์ เปิดให้บริการมากกว่า 2 ปี ด้วยความตั้งใจจริงในการคัดสรรสินค้าและบริการที่ดีที่สุดให้กับลูกค้า เราเชื่อมั่นว่า “ของดี บริการไว และราคายุติธรรม” คือหัวใจสำคัญของธุรกิจที่ยั่งยืน
+
+                        เราเป็นผู้จำหน่าย ท่อ PVC / อุปกรณ์ข้อต่อ / ท่อ PP-R / ท่อร้อยสายไฟ SCG คุณภาพมาตรฐานโรงงาน รองรับทั้งงานบ้าน งานอาคาร ไปจนถึงโครงการขนาดใหญ่ พร้อมจำหน่าย สินค้าแบรนด์ Sanwa ที่เป็นที่รู้จักในเรื่องคุณภาพ และ เครื่องมือช่าง ครบวงจร ที่ช่างมืออาชีพไว้วางใจ</p>
+                    <p class="text-gray-600 mb-4">เรามุ่งมั่นนำเสนอสินค้าคุณภาพในราคายุติธรรม
+                        พร้อมบริการหลังการขายที่ใส่ใจลูกค้าทุกท่าน</p>
+
+                    <div class="mt-6">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-8 h-8 bg-red-700 text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="font-medium">สินค้าคุณภาพ มาตรฐานอุตสาหกรรม</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-8 h-8 bg-red-700 text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="font-medium">บริการทั้งปลีกและส่ง ราคายุติธรรม</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div
+                                class="w-8 h-8 bg-red-700 text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="font-medium">ทีมงานมืออาชีพพร้อมให้คำปรึกษา</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-700 mb-4">บริการของเรา</h2>
+                <div class="w-20 h-1 bg-red-700 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-truck text-red-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">บริการจัดส่ง</h3>
+                            <p class="text-gray-600">เรามีบริการจัดส่งสินค้าทั่วประเทศ ด้วยระบบขนส่งที่รวดเร็วและปลอดภัย
+                                พร้อมติดตามสถานะการจัดส่งแบบเรียลไทม์</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-users text-red-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">บริการลูกค้าสัมพันธ์</h3>
+                            <p class="text-gray-600">ทีมงานมืออาชีพพร้อมให้คำปรึกษาเกี่ยวกับผลิตภัณฑ์และวิธีการใช้งาน
+                                ตลอดจนการแก้ไขปัญหาต่างๆ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-store text-red-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">บริการขายส่ง</h3>
+                            <p class="text-gray-600">สำหรับร้านค้าและผู้รับเหมา เรามีนโยบายราคาส่งพิเศษ
+                                เมื่อซื้อครบตามจำนวนที่กำหนด</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-tools text-red-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">บริการหลังการขาย</h3>
+                            <p class="text-gray-600">เรามีบริการหลังการขายที่ครอบคลุม
+                                รวมถึงการรับประกันสินค้าและการเปลี่ยนสินค้าที่มีปัญหา</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-700 mb-4">รีวิวจากลูกค้า</h2>
+                <div class="w-20 h-1 bg-red-700 mx-auto"></div>
+            </div>
+
+            <div class=" w-full rounded-lg overflow-hidden shadow-lg">
+                <div class="elfsight-app-0c712636-2417-4e57-a43c-0d28048bf874" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-red-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">ติดต่อเรา</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold mb-6">ข้อมูลติดต่อ</h3>
+
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-white text-red-700 p-2 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">ที่อยู่</h4>
+                            <p>155 91 ชุฆชนไร่กล้วย ม.2 สุรศักดิ์ อำเภอศรีราชา ชลบุรี 20110</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-white text-red-700 p-2 rounded-full mr-4">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">โทรศัพท์</h4>
+                            <p>086 415 3561</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="mb-6 flex items-start">
+                        <div class="bg-white text-red-700 p-2 rounded-full mr-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">อีเมล</h4>
+                            <p>contact@sophonhardware.com</p>
+                        </div>
+                    </div> -->
+
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-white text-red-700 p-2 rounded-full mr-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">เวลาทำการ</h4>
+                            <p>จันทร์-เสาร์: 7:00 - 17:30 น.</p>
+                            <p>อาทิตย์: ปิดทำการ</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">ติดตามเรา</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/sopon.hardware" target="_blank"
+                            class="bg-white text-red-700 p-3 rounded-full hover:bg-gray-100 transition">
+                             <i class="fab fa-facebook-f"></i>
+                         </a>
+                         <a href="https://lin.ee/W7uzJqZ" target="_blank"
+                            class="bg-white text-red-700 p-3 rounded-full hover:bg-gray-100 transition">
+                             <i class="fab fa-line"></i>
+                         </a>
+                         
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 h-96 rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.467184265951!2d100.94784127507958!3d13.151484387180663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b7b90f38c61f%3A0x1db9cd4c4852719!2z4LmC4Liq4Lig4LiTIOC4ruC4suC4o-C5jOC4lOC5geC4p-C4o-C5jCAtIOC4guC4suC4ouC4quC5iOC4h-C4l-C5iOC4rSDguK3guLjguJvguIHguKPguJPguYzguJvguKPguLDguJvguLIg4LmA4LiE4Lij4Li34LmI4Lit4LiH4Lih4Li34Lit4LiK4LmI4Liy4LiH!5e1!3m2!1sth!2sth!4v1744047895629!5m2!1sth!2sth"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tools text-2xl text-red-500"></i>
+                        <h2 class="text-2xl font-bold">โสภณ ฮาร์ดแวร์</h2>
+                    </div>
+                    <p class="text-gray-400 max-w-md">จำหน่าย ท่อPVC/อุปกรณ์ข้อต่อ/ท่อPP-R/ท่อร้อยสาย ของ SCG จัดส่งฟรีถึงหน้างานทั่วประเทศ รวมทั้งสินค้าแบรนด์ Sanwa เครื่องมือช่าง ราคาปลีก-ส่ง</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">เมนู</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition">หน้าแรก</a></li>
+                            <li><a href="#products" class="text-gray-400 hover:text-white transition">สินค้า</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">เกี่ยวกับเรา</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">บริการ</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">ติดต่อเรา</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">สินค้า</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">ท่อ PVC</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">อุปกรณ์ประปา</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">เครื่องมือช่าง</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">สินค้าใหม่</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">สินค้าขายดี</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">ติดต่อ</h3>
+                        <ul class="space-y-2">
+                            <li class="text-gray-400">02-123-4567</li>
+                            <li class="text-gray-400">081-234-5678</li>
+                            <li class="text-gray-400">contact@sophonhardware.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 โสภณ ฮาร์ดแวร์. สงวนลิขสิทธิ์.</p>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-line"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-red-700 text-white w-10 h-10 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Product Category Buttons
+        const productCategoryButtons = document.querySelectorAll('.product-category-btn');
+
+        productCategoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                productCategoryButtons.forEach(btn => {
+                    btn.classList.remove('bg-red-700', 'text-white');
+                    btn.classList.add('bg-white', 'text-red-700', 'border', 'border-red-700');
+                });
+
+                button.classList.remove('bg-white', 'text-red-700', 'border', 'border-red-700');
+                button.classList.add('bg-red-700', 'text-white');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        const callButton = document.getElementById('confirm-call');
+
+        callButton.addEventListener('click', () => {
+            const confirmResult = confirm("คุณต้องการโทรหาเบอร์ 092-687-7304 ใช่หรือไม่?");
+            if (confirmResult) {
+                window.location.href = "tel:0926877304";
+            }
+        })
+    </script>
+</body>
+
+</html>
